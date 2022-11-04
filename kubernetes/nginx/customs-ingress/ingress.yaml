@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-apicurio
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 8m
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: "/"
+        backend:
+          service:
+            name: apicurio-studio-ui
+            port:
+              number: 8093
+        pathType: ImplementationSpecific
+#      - path: "/v1/fif/bfa/cl/redbanc/attachmentget/originid/([a-zA-Z0-9\\-])+/providerid/([a-zA-Z0-9\\-])+/operationid/([a-zA-Z0-9\\-])+/attachmentid/([a-zA-Z0-9\\-])+"
+#        backend:
+#          service:
+#            name: ms-redbnkattget-svc
+#            port:
+#              number: 8051
