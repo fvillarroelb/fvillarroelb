@@ -17,9 +17,9 @@ spec:
             port:
               number: 8093
         pathType: ImplementationSpecific
-#      - path: "/v1/fif/bfa/cl/redbanc/attachmentget/originid/([a-zA-Z0-9\\-])+/providerid/([a-zA-Z0-9\\-])+/operationid/([a-zA-Z0-9\\-])+/attachmentid/([a-zA-Z0-9\\-])+"
+#      - path: "/v1/attachmentget/originid/([a-zA-Z0-9\\-])+/providerid/([a-zA-Z0-9\\-])+/operationid/([a-zA-Z0-9\\-])+/attachmentid/([a-zA-Z0-9\\-])+"
 #        backend:
 #          service:
-#            name: ms-redbnkattget-svc
+#            name: ms-attget-svc
 #            port:
 #              number: 8051
